@@ -21,3 +21,5 @@ var magentoInventory = Dictionary.CreateDictionary(magentoRecords, MagentoInvent
 var inventoryDoesNotMatch = CompareMagentoToOCInventory.CompareMagentoToOmegaCubeInventory(magentoInventory, omegaCubeRecords);
 
 DisplayInventoryItemsThatDoNotMatch.DisplayOutput(inventoryDoesNotMatch);
+
+Console.ReadLine();
