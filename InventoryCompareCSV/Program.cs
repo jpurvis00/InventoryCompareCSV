@@ -1,8 +1,12 @@
 ﻿
 using InventoryCompareCSV.Models;
 using InventoryCompareCSV;
+using Microsoft.Extensions.Configuration;
 
-DirectoryInfo dirInfo = new DirectoryInfo(@"D:\MyProjects\InventoryCompareCSV");
+
+var filePath = Configuration.InitializeConfiguration();
+
+DirectoryInfo dirInfo = new DirectoryInfo(filePath);
 var fileNameOmegaCube = dirInfo.GetFiles("Magento Stock default*").OrderByDescending(f => f.CreationTime).First().ToString();
 var fileNameMagento = dirInfo.GetFiles("export_catalog_product*").OrderByDescending(f => f.CreationTime).First().ToString();
 
