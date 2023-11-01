@@ -18,8 +18,6 @@ namespace InventoryCompareCSV
                     {
                         inventoryDoesNotMatch.Add($"    sku: {record.Sku}   omega quantity: {record.Quantity}   magento quantity: {magentoInventory[record.Sku]}");
                     }
-
-                    Console.WriteLine($"    sku: {record.Sku}   omega quantity: {record.Quantity}   magento quantity: {magentoInventory[record.Sku]}");
                 }
 
             }
