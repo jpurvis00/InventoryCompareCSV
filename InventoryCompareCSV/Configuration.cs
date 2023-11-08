@@ -22,12 +22,15 @@ namespace InventoryCompareCSV
             {
                 _csvFile = _config.GetValue<string>("devFilePath");
             }
-            else
+            else if(environment == "Production")
             {
                 _csvFile = _config.GetValue<string>("prodFilePath");
             }
-
-            return _csvFile;
+            else if(environment == "Production2")
+            {
+                _csvFile = _config.GetValue<string>("prod2FilePath");
+            }
+                return _csvFile;
         }
     }
 }
