@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace InventoryCompareCSV
 {
     public class Dictionary
     {
+        /* Made the following method as generic.  The Func lets me specify what propery I want to be the key/value.
+         * ex call: CreateDictionary(magentoRecords, MagentoInventoryModel => MagentoInventoryModel.Sku, MagentoInventoryModel => MagentoInventoryModel.Qty);
+         */
         public static Dictionary<string, double> CreateDictionary<T>(IEnumerable<T> records, Func<T, string> keySelector, Func<T, double> valueSelector)
         {
             var dictionary = new Dictionary<string, double>();

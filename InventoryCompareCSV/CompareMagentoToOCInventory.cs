@@ -1,4 +1,5 @@
-﻿using InventoryCompareCSV.Models;
+﻿
+using InventoryCompareCSV.Models;
 
 namespace InventoryCompareCSV
 {
